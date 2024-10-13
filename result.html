@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Information for ActualNB: {{ cars_info[0]['ActualNB'] }}</h1>
+        {% for car_info in cars_info %}
+            <div class="car-info">
+                <h2>Record {{ loop.index }}</h2>
+                <ul>
+                    <li><strong>Address:</strong> {{ car_info['Addresse'] }}</li>
+                    <li><strong>Owner's Age:</strong> {{ car_info['AgeProp'] }}</li>
+                    <li><strong>Birthplace:</strong> {{ car_info['BirthPlace'] }}</li>
+                    <li><strong>Chassis:</strong> {{ car_info['Chassis'] }}</li>
+                    <li><strong>Code Description:</strong> {{ car_info['CodeDesc'] }}</li>
+                    <li><strong>Color Description:</strong> {{ car_info['CouleurDesc'] }}</li>
+                    <li><strong>Date of Acquisition:</strong> {{ car_info['dateacquisition'] }}</li>
+                    <li><strong>Out of Service:</strong> {{ car_info['HorsService'] }}</li>
+                    <li><strong>Brand Description:</strong> {{ car_info['MarqueDesc'] }}</li>
+                    <li><strong>Engine:</strong> {{ car_info['Moteur'] }}</li>
+                    <li><strong>Owner's Name:</strong> {{ car_info['Nom'] }}</li>
+                    <li><strong>Mother's Name:</strong> {{ car_info['NomMere'] }}</li>
+                    <li><strong>Registration Number:</strong> {{ car_info['NoRegProp'] }}</li>
+                    <li><strong>First Use Date:</strong> {{ car_info['PreMiseCirc'] }}</li>
+                    <li><strong>First Name:</strong> {{ car_info['Prenom'] }}</li>
+                    <li><strong>Production Date:</strong> {{ car_info['PRODDATE'] }}</li>
+                    <li><strong>Phone Number:</strong> {{ car_info['TelProp'] }}</li>
+                    <li><strong>Type Description:</strong> {{ car_info['TypeDesc'] }}</li>
+                    <li><strong>Usage Description:</strong> {{ car_info['UtilsDesc'] }}</li>
+                </ul>
+            </div>
+            <hr>
+        {% endfor %}
+        <a href="/" class="btn">Search Again</a>
+    </div>
+</body>
+</html>

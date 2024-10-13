@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search by ActualNB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Plate Letter & Number</h1>
+        <h2>Thamthoumi</h2>
+        <div class="canvas-container">
+            <canvas id="canvas" tabindex="0" width="600" height="360" aria-label="License Plate Input"></canvas>
+            <img src="search_icon.png" alt="Search" class="search-icon" id="searchIcon" tabindex="0" role="button" aria-label="Search License Plate">
+        </div>
+        <form method="POST" action="/" id="plateForm">
+            <input type="hidden" id="codedesc" name="codedesc" required>
+            <input type="hidden" id="actualnb" name="actualnb" required>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
